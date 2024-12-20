@@ -6,7 +6,8 @@ import (
 	"regexp"
 )
 
-func titulo(urls []string) <-chan string {
+// Titulo function obtem o titulo de uma pagina web
+func Titulo(urls []string) <-chan string {
 	c := make(chan string)
 	for _, url := range urls {
 		go func(url string) {
